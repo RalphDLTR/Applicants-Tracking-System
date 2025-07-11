@@ -1,0 +1,189 @@
+:root {
+    --font-family-inter: "Inter", sans-serif;
+    --font-family-roboto: "Roboto", sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.t-roboto {
+    font-family: var(--font-family-roboto);
+}
+
+.input-login {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 1;
+    background-color: white;
+    border: 1px solid whitesmoke;
+    border-radius: 8px;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: whitesmoke;
+
+    overflow-x: hidden;
+}
+
+header {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+
+    background-color: #222840;
+}
+
+.header {
+    margin-inline: 50px;
+    display: flex;
+    flex-basis: auto;
+    flex: 1;
+
+    color: white;
+
+    align-items: center;
+}
+
+.body {
+    margin-top: 50px;
+    margin-inline: 80px;
+
+    justify-content: end;
+}
+
+.h-stack {
+    display: flex;
+    flex-basis: auto;
+    flex: 1;
+
+    align-items: center;
+}
+
+.v-stack {
+    display: grid;
+    align-items: center;
+}
+
+.container {
+    padding: 10px;
+}
+
+.con-fit {
+    height: 100%;
+    width: 100%;
+}
+
+.login-box {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding-block: 30px;
+    padding-inline: 40px;
+}
+
+input {
+    background: whitesmoke;
+    border: none;
+    cursor: text;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    justify-content: end;
+}
+
+input[type="submit"] {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+button {
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+}
+
+.button {
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+    margin-inline: 20px;
+    display: grid;
+    justify-items: center;
+    background-color: rgb(180, 180, 180);
+    border-radius: 5px;
+}
+
+.list {
+    background-color: rgb(230,230,230);
+    margin-top: 20px;
+}
+
+.title {
+    display: flex;
+    width: 30%;
+    padding-block: 10px;
+    padding-inline: 20px;
+    justify-content: center;
+}
+
+.list-item {
+    border-style: solid;
+    border-block-style: hidden;
+    border-width: 1px;
+    border-color: rgba(0, 0, 0, 0.156);
+    display: flex;
+    width: 50vw;
+    padding-block: 10px;
+    padding-inline: 20px;
+    justify-content: center;
+}
+
+.li-id {
+    width: 20px;
+}
+
+.li-fn {
+    width: 200px;
+}
+
+.li-ln {
+    width: 200px;
+}
+
+.li-email {
+    width: 250px;
+}
+
+.li-phone {
+    width: 200px;
+}
+
+.li-file {
+    width: 200px;
+}
+
+.li-role {
+    width: 200px;
+}
+
+.li-buttons{
+    display: flex;
+    justify-content: center;
+}
+
+.li-button {
+    justify-content: center;
+}

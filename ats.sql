@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2025 at 05:07 AM
+-- Generation Time: Jul 11, 2025 at 05:15 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,49 +24,36 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data`
+-- Table structure for table `applicant`
 --
 
-CREATE TABLE `data` (
+CREATE TABLE `applicant` (
   `id` int(10) UNSIGNED NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `lastname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `users`
---
-
-CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('superadmin','admin','user') NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
-  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
-  `identification` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL
+  `role` enum('superadmin','admin','applicant') NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `applicant`
+--
+
+INSERT INTO `applicant` (`id`, `email`, `password`, `role`, `firstname`, `lastname`) VALUES
+(1, '', '$2y$10$sT2482fE3ome9Kvh7ujtuOs87lFuU1VqYv4dj8wdGizUPOfbU1g/e', 'admin', '', ''),
+(4, 'email@gmail.com', '$2y$10$YYbL6WWiSaPvXlRG2ToQresrwMyFSGrwHqFsHezXRhtIO8.Mvhu2C', 'admin', '', ''),
+(7, 'aa@gmail.com', '$2y$10$cBucuX09UJuNh3kU4EemhOhblP0keCJlskwOskVSVRiot6yX1BPkC', 'admin', 'aa', 'aa');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `data`
+-- Indexes for table `applicant`
 --
-ALTER TABLE `data`
+ALTER TABLE `applicant`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email_unique` (`email`);
-
---
--- Indexes for table `users`
---
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `id_unique` (`identification`),
   ADD UNIQUE KEY `email_unique` (`email`);
 
 --
@@ -74,16 +61,10 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT for table `data`
+-- AUTO_INCREMENT for table `applicant`
 --
-ALTER TABLE `data`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `users`
---
-ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+ALTER TABLE `applicant`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
